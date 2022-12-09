@@ -9,6 +9,8 @@ app.use(express.json());
 app.use(require("./routes/record"));
 // get driver connection
 const dbo = require("./db/conn");
+
+app.use('/', recordRoutes);
  
 app.listen(port, () => {
   // perform a database connection when server starts
